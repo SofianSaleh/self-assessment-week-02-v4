@@ -120,7 +120,7 @@ var postData = function(message, username) {
       text: message
     }),
     success: function(data) {
-      console.log('Success!', data);
+      displayData(data, username);
        $('#main').prepend('<div class="success">Success!</div>');
 
     },

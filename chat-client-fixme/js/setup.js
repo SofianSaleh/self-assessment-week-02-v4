@@ -105,6 +105,7 @@ var displayData = function(data, user) {
   $('#submitButton').click(function() {
     getData()
     $('#main').prepend(data)
+          $('.success').hide()
   })
    getData();
 };
@@ -120,6 +121,8 @@ var postData = function(message, username) {
     }),
     success: function(data) {
       console.log('Success!', data);
+       $('#main').prepend('<div class="success">Success!</div>');
+
     },
     error: function(data) {
       console.log(data);

@@ -102,8 +102,13 @@ var displayData = function(data, user) {
     }
     getData();
   });
+  $('#submitButton').click(function() {
+    getData()
+    $('#main').prepend(data)
+  })
+   getData();
 };
-
+// this function sends text to the server
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
